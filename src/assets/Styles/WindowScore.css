@@ -1,0 +1,71 @@
+.container-windowScore {
+  padding: 23px;
+}
+
+.container-icon-star {
+  width: 44px;
+  height: 44px;
+  background-color: hsl(213, 17%, 20%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-submit {
+  width: 280px;
+  height: 47px;
+  border-radius: 30px;
+  background-color: var(--Orange);
+  cursor: pointer;
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.button-submit:hover {
+  background-color: var(--White);
+  color: var(--DarkBlue);
+  transform: scale(1.03);
+}
+
+.container-text {
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.container-text h2 {
+  color: var(--White);
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.container-text h3 {
+  color: var(--LightGrey);
+  font-size: 13px;
+}
+
+.container-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+/*.................(>1440px)......................*/
+@media only screen and (min-width: 1440px) {
+  .container-icon-star {
+    width: 51px;
+    height: 51px;
+  }
+  .button-submit {
+    width: 344px;
+    height: 50px;
+  }
+  .container-text h3 {
+    font-size: 16px;
+  }
+  .container-text h2 {
+    font-size: 32px;
+  }
+}

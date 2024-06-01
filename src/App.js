@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import WindowScore from "./assets/Components/WindowScore.jsx";
+import WindowPopUps from "./assets/Components/WindowPopUps.jsx";
+import "../node_modules/animate.css/animate.min.css";
 
 function App() {
+  const [popups, setpopups] = useState(false);
+  const [score, setScore] = useState(0);
+
+  console.log(popups);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main-container">
+      {popups ? (
+        <WindowPopUps score={score} setpopups={setpopups} popups={popups} />
+      ) : (
+        <WindowScore
+          score={score}
+          setScore={setScore}
+          setpopups={setpopups}
+          popups={popups}
+        />
+      )}
+    </main>
   );
 }
 
