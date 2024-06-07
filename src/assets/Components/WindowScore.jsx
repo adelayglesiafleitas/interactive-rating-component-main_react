@@ -3,6 +3,8 @@ import "../Styles/WindowScore.css";
 import Score from "../Components/score.jsx";
 
 const WindowScore = ({ score, setScore, setpopups, popups }) => {
+  const cantButton = [0, 1, 3, 4, 5];
+
   const handleSubmit = () => {
     if (score != 0) {
       setpopups(!popups);
@@ -27,11 +29,14 @@ const WindowScore = ({ score, setScore, setpopups, popups }) => {
       </div>
 
       <div className="container-buttons">
-        <Score number={1} score={score} setScore={setScore} />
-        <Score number={2} score={score} setScore={setScore} />
-        <Score number={3} score={score} setScore={setScore} />
-        <Score number={4} score={score} setScore={setScore} />
-        <Score number={5} score={score} setScore={setScore} />
+        {cantButton.map((button) => (
+          <Score
+            key={button}
+            number={button}
+            score={score}
+            setScore={setScore}
+          />
+        ))}
       </div>
       <button
         className="button-submit animate__animated animate__bounceIn"
